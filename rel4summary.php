@@ -1,7 +1,7 @@
 <?php
 
 function rel4summary_civicrm_summary( $contactID, &$content) {
-$rel = civicrm_api ("relationship", "get", array("version"=>3,"contact_id"=>$contactID ));
+$rel = civicrm_api ("relationship", "get", array("version"=>3,"status_id"=>3,"contact_id"=>$contactID ));
 
 $content = "<div id='relationships'>";
 foreach ($rel["values"] as $r) {
